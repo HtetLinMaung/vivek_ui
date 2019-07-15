@@ -4,7 +4,7 @@
 
     <v-layout wrap v-for="home_item in home_items" :key="home_item">
       <v-flex md2 v-for="cards in home_item" :key="cards.title">
-        <v-card class="rounded">
+        <v-card class="rounded" :to="cards.route">
           <v-card-title primary-title>
             <div>
               <h3 class="headline mb-0">{{ cards.title }}</h3>
@@ -24,44 +24,52 @@ export default {
       {
         text: "Home",
         disabled: false,
-        href: "/"
+        to: "/"
       }
     ],
     home_items: [
       [
         {
           icon: "",
-          title: "Meditation Hall"
+          title: "Meditation Hall",
+          route: "",
         },
         {
           icon: "",
-          title: "Music"
+          title: "Music",
+          route: "",
         },
         {
           icon: "",
-          title: "Case Study"
+          title: "Case Study",
+          route: "/casestudy",
         },
         {
           icon: "",
-          title: "Community"
+          title: "Community",
+          route: "",
         },
         {
           icon: "",
-          title: "Course Update"
+          title: "Course Update",
+          route: "",
         }
       ],
       [
         {
           icon: "",
-          title: "Teacher Bio"
+          title: "Teacher Bio",
+          route: "",
         },
         {
           icon: "",
-          title: "Feedback Box"
+          title: "Feedback Box",
+          route: "",
         },
         {
           icon: "",
-          title: "Registered User Info"
+          title: "Registered User Info",
+          route: "",
         }
       ]
     ]
