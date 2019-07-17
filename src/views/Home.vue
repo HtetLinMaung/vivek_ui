@@ -32,48 +32,55 @@ export default {
         {
           icon: "",
           title: "Meditation Hall",
-          route: "",
+          route: "/meditationhall"
         },
         {
           icon: "",
           title: "Music",
-          route: "",
+          route: ""
         },
         {
           icon: "",
           title: "Case Study",
-          route: "/casestudy",
+          route: "/casestudy"
         },
         {
           icon: "",
           title: "Community",
-          route: "",
+          route: ""
         },
         {
           icon: "",
           title: "Course Update",
-          route: "",
+          route: ""
         }
       ],
       [
         {
           icon: "",
           title: "Teacher Bio",
-          route: "",
+          route: ""
         },
         {
           icon: "",
           title: "Feedback Box",
-          route: "",
+          route: ""
         },
         {
           icon: "",
           title: "Registered User Info",
-          route: "",
+          route: ""
         }
       ]
     ]
-  })
+  }),
+  mounted() {
+    //   breadcrumb bug fix
+    const breadcrumbs = document.querySelectorAll(".v-breadcrumbs__item");
+    for (let i = 0; i < breadcrumbs.length; i++) {
+      breadcrumbs[i].classList.remove("v-breadcrumbs__item--disabled");
+    }
+  }
 };
 </script>
 
